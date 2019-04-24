@@ -1,0 +1,24 @@
+open class Person(open val name: String) {
+   init {
+       println("Object created!")
+   }
+
+    fun greet(){
+        println("Hello!")
+    }
+}
+
+class Student(override val name: String): Person(name) {
+
+}
+
+class Professor(override val name: String): Person(name) {
+
+}
+
+fun main() {
+    var dave = Student("Dave")
+
+    dave.greet()
+
+}
